@@ -39,12 +39,6 @@ colorscheme mustang
 autocmd ColorScheme * highlight Cursor guifg=NONE guibg=#ff9800
 set guifont=Consolas:h13:cANSI
 
-" TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
-" source ~/.vimrc.before if it exists.
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
-
 " ================ General Config ====================
 
 inoremap jk <esc>
@@ -89,11 +83,9 @@ nnoremap <Leader>f :Unite grep:.<cr>
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#custom#source('file_rec/async','sorters','sorter_rank')
+
 " replacing unite with ctrl-p
 nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
-
-"NERDTREE
-noremap <Leader>n :NERDTreeToggle<cr>
 
 " buffer
 map <leader>n :bn<cr>
