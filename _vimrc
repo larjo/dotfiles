@@ -21,7 +21,7 @@ source ~/mswin.vim
 set rtp+=~/vimfiles/bundle/vundle.vim/
 let path='~/vimfiles/bundle'
 call vundle#begin(path)
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Lokaltog/vim-easymotion'
@@ -32,11 +32,12 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 Plugin 'dag/vim2hs'
 Plugin 'Twinside/vim-haskellConceal'
-colorscheme mustang
-
-set guifont=Consolas:h13:cANSI
-
+call vundle#end()
 filetype plugin indent on
+
+colorscheme mustang
+autocmd ColorScheme * highlight Cursor guifg=NONE guibg=#ff9800
+set guifont=Consolas:h13:cANSI
 
 " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
 " source ~/.vimrc.before if it exists.
