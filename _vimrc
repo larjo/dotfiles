@@ -18,20 +18,21 @@ endif
 
 source ~/mswin.vim
 
-set rtp+=~/vimfiles/bundle/vundle/
-call vundle#rc('$HOME/vimfiles/bundle/')
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Shougo/unite.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Colour-Sampler-Pack'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tpope/vim-surround'
-Bundle 'dag/vim2hs'
-Bundle 'Twinside/vim-haskellConceal'
-colorscheme Mustang
+set rtp+=~/vimfiles/bundle/vundle.vim/
+let path='~/vimfiles/bundle'
+call vundle#begin(path)
+Plugin 'gmarik/vundle'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/Colour-Sampler-Pack'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-surround'
+Plugin 'dag/vim2hs'
+Plugin 'Twinside/vim-haskellConceal'
+colorscheme mustang
 
 set guifont=Consolas:h13:cANSI
 
