@@ -109,6 +109,10 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+" scrolling
+nnoremap <C-j> jzz
+nnoremap <C-k> kzz
+
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundle.vim
 " Use Vundle plugin to manage all other plugins
