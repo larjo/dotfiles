@@ -40,7 +40,8 @@ autocmd ColorScheme * highlight Cursor guifg=NONE guibg=#ff9800
 set guifont=Consolas:h13:cANSI
 
 " ================ General Config ====================
-
+set ignorecase
+set smartcase
 inoremap jk <esc>
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
