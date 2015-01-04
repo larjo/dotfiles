@@ -18,25 +18,31 @@ endif
 
 source ~/mswin.vim
 
-set rtp+=~/vimfiles/bundle/vundle.vim/
+set rtp+=~/vimfiles/bundle/neobundle.vim/
 let path='~/vimfiles/bundle'
-call vundle#begin(path)
-Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Shougo/unite.vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/Colour-Sampler-Pack'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-surround'
-Plugin 'dag/vim2hs'
-Plugin 'Twinside/vim-haskellConceal'
-call vundle#end()
+call neobundle#begin(expand(path))
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'kien/ctrlp.vim'
+"NeoBundle 'Shougo/vimproc.vim', {'build': {'windows':'make -f make_mingw32.mak'}}
+"NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'vim-scripts/Colour-Sampler-Pack'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'dag/vim2hs'
+NeoBundle 'Twinside/vim-haskellConceal'
+call neobundle#end()
+
 filetype plugin indent on
 
+NeoBundleCheck
 colorscheme mustang
+
+" orange cursor
 autocmd ColorScheme * highlight Cursor guifg=NONE guibg=#ff9800
+
 set guifont=Consolas:h13:cANSI
 
 " ================ General Config ====================
@@ -74,19 +80,6 @@ syntax on
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
 let mapleader=" "
-
-" unite
-nnoremap <silent> <Leader>m :Unite -buffer-name=recent -winheight=10 file_mru<cr>
-nnoremap <Leader>b :Unite -buffer-name=buffers -winheight=10 buffer<cr>
-nnoremap <Leader>f :Unite grep:.<cr>
-
-" CtrlP search
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#custom#source('file_rec/async','sorters','sorter_rank')
-
-" replacing unite with ctrl-p
-nnoremap <silent> <C-p> :Unite -start-insert -buffer-name=files -winheight=10 file_rec/async<cr>
 
 " buffer
 map <leader>n :bn<cr>
