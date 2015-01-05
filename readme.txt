@@ -1,8 +1,7 @@
-Install chocolately
-cinst git && cinst vim
+1. Install chocolately
+2. cinst git && cinst vim
 
-cd %USERPROFILE%
-git clone https://github.com/Shougo/neobundle.vim vimfiles/bundle/neobundle.vim
-git clone https://github.com/larjo/dotfiles.git
-cd dotfiles
-links.bat
+3. Start admin console
+    cd %USERPROFILE%
+    git clone https://github.com/larjo/dotfiles.git
+    dotfiles\install.bat
