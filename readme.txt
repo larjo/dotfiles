@@ -4,4 +4,4 @@
 3. Start admin console
     cd %USERPROFILE%
     git clone https://github.com/larjo/dotfiles.git
-    dotfiles\install.bat
+    dotfiles\install.bat (or if your not admin: nonadmin-install.bat)
