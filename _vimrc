@@ -33,6 +33,7 @@ NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'dag/vim2hs'
 NeoBundle 'Twinside/vim-haskellConceal'
+NeoBundle 'kongo2002/fsharp-vim'
 call neobundle#end()
 
 filetype plugin indent on
