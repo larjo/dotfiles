@@ -1,4 +1,4 @@
-git clone https://github.com/Shougo/neobundle.vim vimfiles/bundle/neobundle.vim
-copy dotfiles\mswin.vim 
-copy dotfiles\_vimrc
+git clone https://github.com/Shougo/neobundle.vim %USERPROFILE%/vimfiles/bundle/neobundle.vim
+copy mswin.vim %USERPROFILE%\mswin.vim 
+copy mswin.vim %USERPROFILE%\_vimrc
 gvim
