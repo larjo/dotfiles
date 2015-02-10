@@ -87,6 +87,7 @@ let mapleader=" "
 map <leader>n :bn<cr>
 map <leader>p :bp<cr>
 map <leader>d :bd<cr>
+map <leader>D :bd!<cr>
 map <cr> <C-w><C-w>
 
 " Splits
