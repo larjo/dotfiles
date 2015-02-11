@@ -27,6 +27,7 @@ NeoBundle 'kien/ctrlp.vim'
 "NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -82,6 +83,24 @@ syntax on
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
 let mapleader=" "
+
+" fugitive git bindings
+nnoremap <leader>gh g?
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit -v -q<CR>
+nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>ge :Gedit<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <leader>gp :Ggrep<leader>
+nnoremap <leader>gm :Gmove<leader>
+nnoremap <leader>gb :Git branch<leader>
+nnoremap <leader>go :Git checkout<leader>
+nnoremap <leader>gps :Dispatch! git push<CR>
+nnoremap <leader>gpl :Dispatch! git pull<CR>
 
 " buffer
 map <leader>n :bn<cr>
