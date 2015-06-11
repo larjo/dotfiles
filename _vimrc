@@ -27,7 +27,6 @@ NeoBundle 'kien/ctrlp.vim'
 "NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -99,8 +98,6 @@ nnoremap <leader>gp :Ggrep<leader>
 nnoremap <leader>gm :Gmove<leader>
 nnoremap <leader>gb :Git branch<leader>
 nnoremap <leader>go :Git checkout<leader>
-nnoremap <leader>gps :Dispatch! git push<CR>
-nnoremap <leader>gpl :Dispatch! git pull<CR>
 
 " buffer
 map <leader>n :bn<cr>
