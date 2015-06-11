@@ -45,7 +45,7 @@ colorscheme mustang
 " orange cursor
 autocmd ColorScheme * highlight Cursor guifg=NONE guibg=#ff9800
 
-set guifont=Consolas:h13:cANSI
+set guifont=Consolas:h12:cANSI
 
 " ================ General Config ====================
 set ignorecase
