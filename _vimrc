@@ -83,6 +83,12 @@ syntax on
 " the plugins.
 let mapleader=" "
 
+" easymotion
+map / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
 " fugitive git bindings
 nnoremap <leader>gh g?
 nnoremap <leader>ga :Git add %:p<CR><CR>
