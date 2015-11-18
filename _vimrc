@@ -23,11 +23,9 @@ let path='~/vimfiles/bundle'
 call neobundle#begin(expand(path))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'kien/ctrlp.vim'
-"NeoBundle 'Shougo/vimproc.vim', {'build': {'windows':'make -f make_mingw32.mak'}}
-"NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tpope/vim-surround'
@@ -35,6 +33,7 @@ NeoBundle 'dag/vim2hs'
 NeoBundle 'Twinside/vim-haskellConceal'
 NeoBundle 'kongo2002/fsharp-vim'
 NeoBundle 'tmhedberg/matchit'
+NeoBundle 'mustache/vim-mustache-handlebars'
 call neobundle#end()
 
 filetype plugin indent on
@@ -45,7 +44,7 @@ colorscheme mustang
 " orange cursor
 autocmd ColorScheme * highlight Cursor guifg=NONE guibg=#ff9800
 
-set guifont=Consolas:h13:cANSI
+set guifont=Consolas:h11:cANSI
 
 " ================ General Config ====================
 set ignorecase
@@ -76,18 +75,17 @@ set hidden
 
 "turn on syntax highlighting
 syntax on
-
+au BufRead,BufNewFile *.mustache set filetype=html
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
 let mapleader=" "
 
-" easymotion
-map / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+set incsearch
+
+" handlebars
+let g:mustache_abbreviations = 1
 
 " fugitive git bindings
 nnoremap <leader>gh g?
