@@ -87,6 +87,9 @@ onoremap <C-A> <C-C>gggH<C-O>G
 snoremap <C-A> <C-C>gggH<C-O>G
 xnoremap <C-A> <C-C>ggVG
 
+nnoremap <A-a> <C-a>
+nnoremap <A-x> <C-x>
+
 " CTRL-Tab is Next window
 noremap <C-Tab> <C-W>w
 inoremap <C-Tab> <C-O><C-W>w
