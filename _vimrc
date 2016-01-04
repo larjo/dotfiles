@@ -41,6 +41,9 @@ filetype plugin indent on
 NeoBundleCheck
 colorscheme mustang
 
+" make c-n work in multiple cursors
+set selection=inclusive
+
 " orange cursor
 autocmd ColorScheme * highlight Cursor guifg=NONE guibg=#ff9800
 
