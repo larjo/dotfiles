@@ -89,6 +89,8 @@ xnoremap <C-A> <C-C>ggVG
 
 nnoremap <A-a> <C-a>
 nnoremap <A-x> <C-x>
+vnoremap <A-a> <C-a>
+vnoremap <A-x> <C-x>
 
 " CTRL-Tab is Next window
 noremap <C-Tab> <C-W>w

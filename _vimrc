@@ -18,6 +18,7 @@ endif
 
 source ~/mswin.vim
 
+
 set rtp+=~/vimfiles/bundle/neobundle.vim/
 let path='~/vimfiles/bundle'
 call neobundle#begin(expand(path))
@@ -25,7 +26,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tpope/vim-surround'
@@ -69,6 +70,7 @@ set wrapmargin=0
 set diffopt+=vertical
 set laststatus=2
 set statusline=%<%f\ %h%m%r\ %{v:register}\ %-14.(%l,%c%V%)\ %P
+set nrformats-=octal " 007 + 1 = 008 (instead of 010)
 "set formatoptions+=1
 
 " This makes vim act like all other editors, buffers can
@@ -78,7 +80,7 @@ set hidden
 
 "turn on syntax highlighting
 syntax on
-au BufRead,BufNewFile *.mustache set filetype=html
+" au BufRead,BufNewFile *.mustache set filetype=html
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all 
