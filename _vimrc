@@ -18,7 +18,6 @@ endif
 
 source ~/mswin.vim
 
-
 set rtp+=~/vimfiles/bundle/neobundle.vim/
 let path='~/vimfiles/bundle'
 call neobundle#begin(expand(path))
@@ -26,12 +25,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'easymotion/vim-easymotion'
+"NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'vim-scripts/Colour-Sampler-Pack'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'dag/vim2hs'
-NeoBundle 'Twinside/vim-haskellConceal'
+"NeoBundle 'dag/vim2hs'
+"NeoBundle 'Twinside/vim-haskellConceal'
 NeoBundle 'kongo2002/fsharp-vim'
 NeoBundle 'tmhedberg/matchit'
 NeoBundle 'mustache/vim-mustache-handlebars'
@@ -89,6 +89,25 @@ let mapleader=" "
 
 set incsearch
 
+"easymotion
+let g:EasyMotion_keys = 'asdghklqwertyuiopzxcvbnmfj'
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+"nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
 " handlebars
 let g:mustache_abbreviations = 1
 
@@ -116,10 +135,10 @@ map <leader>D :bd!<cr>
 map <cr> <C-w><C-w>
 
 " Splits
-nnoremap <leader>j <C-W><C-J>
-nnoremap <leader>k <C-W><C-K>
-nnoremap <leader>l <C-W><C-L>
-nnoremap <leader>h <C-W><C-H>
+"nnoremap <leader>j <C-W><C-J>
+"nnoremap <leader>k <C-W><C-K>
+"nnoremap <leader>l <C-W><C-L>
+"nnoremap <leader>h <C-W><C-H>
 set splitbelow
 set splitright
 
